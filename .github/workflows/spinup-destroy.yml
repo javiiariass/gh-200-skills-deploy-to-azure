@@ -64,4 +64,4 @@ jobs:
       - name: Destroy Azure environment
         if: success()
         run: |
-          az group delete --name ${{env.AZURE_RESOURCE_GROUP}} --yes
+          az group delete --name ${{ env.AZURE_RESOURCE_GROUP }} --subscription "$(az account show --query id --output tsv)" --yes
