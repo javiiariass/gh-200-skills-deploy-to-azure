@@ -94,7 +94,7 @@ jobs:
         with:
           creds: ${{ env.AZURE_CREDENTIALS_FORMATTED }}
 
-      - uses: azure/docker-login@v1
+      - uses: azure/docker-login@v2
         with:
           login-server: ${{env.IMAGE_REGISTRY_URL}}
           username: ${{ github.actor }}
